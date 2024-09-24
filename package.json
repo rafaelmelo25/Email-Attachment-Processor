@@ -1,0 +1,19 @@
+{
+  "name": "email",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "fs": "^0.0.1-security",
+    "imap-simple": "^5.1.0",
+    "mailparser": "^3.7.1",
+    "node-cron": "^3.0.3",
+    "nodemailer": "^6.9.15"
+  }
+}
