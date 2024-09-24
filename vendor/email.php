@@ -7,8 +7,8 @@ require 'vendor/autoload.php';
 
 // Configurações de IMAP
 $hostname = '{imap.gmail.com:993/imap/ssl}INBOX';
-$username = 'rafa.melo.p25@gmail.com'; // Substitua com seu e-mail
-$password = 'Balachita@251288'; // Substitua com sua senha
+$username = 'email@gmail.com'; // Substitua com seu e-mail
+$password = 'senha'; // Substitua com sua senha
 
 // Conecta ao servidor IMAP
 $inbox = imap_open($hostname, $username, $password) or die('Não foi possível conectar ao IMAP: ' . imap_last_error());
@@ -75,13 +75,13 @@ function enviarEmailConfirmacao($remetente)
         $mail->isSMTP();
         $mail->Host = 'smtp.gmail.com';
         $mail->SMTPAuth = true;
-        $mail->Username = 'rafa.melo.p25@gmail.com'; // Substitua com seu e-mail
-        $mail->Password = 'Balachita@251288'; // Substitua com sua senha
+        $mail->Username = 'email@gmail.com'; // Substitua com seu e-mail
+        $mail->Password = 'senha'; // Substitua com sua senha
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
         $mail->Port = 587;
 
         // Destinatários
-        $mail->setFrom('rafa.melo.p25@gmail.com', 'Rafael');
+        $mail->setFrom('email@gmail.com', 'Nome');
         $mail->addAddress($remetente); // E-mail do remetente original
 
         // Conteúdo do e-mail
